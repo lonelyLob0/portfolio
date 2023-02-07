@@ -1,0 +1,40 @@
+/* General */
+:root {
+    --color-primary: #3C415C;
+    --color-secondary: #301B3F;
+    --color-headings: #151515;
+    --color-body: #B4A5A5;
+}
+
+body {
+    background-color : var(--color-body);
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Lists */
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--color-headings);
+    color: var(--color-body)
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    margin: 5px 10px;
+}
