@@ -2,8 +2,8 @@
 :root {
     --color-primary: #3C415C;
     --color-secondary: #301B3F;
-    --color-headings: #151515;
-    --color-body: #B4A5A5;
+    --color-headings: ivory;
+    --color-body: #151515;
 }
 
 body {
@@ -12,7 +12,31 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.img-wrap{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 640px;
+    background-image: url("/static/images/sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Typography */
+html {
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: var(--color-body);
 }
 
 /* Lists */
@@ -25,10 +49,11 @@ body {
 .nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--color-headings);
-    color: var(--color-body)
+    color: var(--color-headings);
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
 }
 
 .nav__list {
@@ -41,8 +66,7 @@ body {
 
 /* Presentation */
 .presentation {
-    width: 960px;
-    height: 640px;
-    background-image: url(/static/images/sky.jpg);
-    background-size: 100%;
+    color: var(--color-headings);
+    padding: 14rem 3rem;
+    text-align: center;
 }
