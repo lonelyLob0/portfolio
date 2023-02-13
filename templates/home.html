@@ -6,21 +6,16 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
     </head>
     <body>
-        <div class="container img-wrap">
-            <nav class="nav">
-                <span> Ale Alvarado | Software Developer </span>
-                <ul class="list nav__list">
-                    <li class="nav__item">Home</li>
-                    <li class="nav__item">About</li>
-                    <li class="nav__item">Contact</li>
-                </ul>
-            </nav>
-            <section class="presentation">
-                <h2>Hi there, welcome to my portfolio!</h2>
-                <p>
-                  I am curious software developer
-                </p>
-            </section>
-        </div>
+        <article class="project">
+            <img class="project__img" src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+            <div class="project__content">
+                <h3 class="project__title">Venus Research</h3>
+                <p>It is a project that scraps data about venus and shows it in a dashboard</p>
+                <div class="project__tags">
+                    <h4>Tag1</h4>
+                    <h4>Tag2</h4>
+                </div>
+            </div>
+        </article>
     </body>
 </html>
