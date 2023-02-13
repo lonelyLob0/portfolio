@@ -21,12 +21,17 @@ body {
     background-image: url("/static/images/sky.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0 0 2rem;
 }
 
 /* Typography */
 html {
   /* 62.5% of 16px = 10px */
   font-size: 62.5%;
+}
+
+h2 {
+    font-size: 3rem;
 }
 
 h3 {
@@ -78,6 +83,8 @@ p{
     flex-direction: column;
     color: var(--color-headings);
     max-width: 400px;
+    box-shadow: 6px 6px 9px rgba(0,0,0,0.8);
+    border-radius: 7%;
 }
 
 .project__content{
@@ -98,4 +105,25 @@ p{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+/* Showroom */
+.showroom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-secondary);
+    margin: 8rem 0;
+    padding: 0 0 2rem;
+}
+
+.showroom__content {
+    display:flex;
+}
+
+.showroom .previous-project,
+.showroom .next-project  {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-body);
 }
