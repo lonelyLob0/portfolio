@@ -85,6 +85,7 @@ p{
     max-width: 400px;
     box-shadow: 6px 6px 9px rgba(0,0,0,0.8);
     border-radius: 7%;
+    margin: 5rem 0;
 }
 
 .project__content{
@@ -119,11 +120,24 @@ p{
 
 .showroom__content {
     display:flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.showroom .previous-project,
-.showroom .next-project  {
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-body);
+.previous-project,
+.next-project  {
+    width: 55px;
+    height: 55px;
+    margin: 0 5rem;
+    transition: transform 0.4s ease;
+    fill: var(--color-secondary);
 }
+
+.previous-project:hover{
+    transform: translateX(-10px);
+}
+
+.next-project:hover{
+    transform: translateX(10px);
+}
+
