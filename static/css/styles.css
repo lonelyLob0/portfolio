@@ -153,8 +153,16 @@ p{
 }
 
 .footer__icon{
-    width: 55px;
-    height: 55px;
+    width: 35px;
+    height: 35px;
     margin: 1rem 5rem;
     fill: var(--color-secondary);
+}
+
+.footer__social-icon {
+    transition: fill 0.8s ease;
+}
+
+.footer__social-icon:hover {
+    fill: var(--color-headings);
 }

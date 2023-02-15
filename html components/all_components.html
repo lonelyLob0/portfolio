@@ -3,9 +3,9 @@
         <nav class="nav">
                 <span> Ale Alvarado | Software Developer </span>
                 <ul class="list nav__list">
-                    <li class="nav__item">Home</li>
-                    <li class="nav__item">About</li>
-                    <li class="nav__item">Contact</li>
+                    <li class="list__item">Home</li>
+                    <li class="list__item">About</li>
+                    <li class="list__item">Contact</li>
                 </ul>
             </nav>
      <section class="presentation">
@@ -17,17 +17,39 @@
     </div>
 
         <section class="showroom">
-            <h2 class="showroom__title"> Showroom</h2>
-            <article class="project">
-            <img class="project__img" src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
-            <div class="project__content">
-                <h3 class="project__title">Venus Research</h3>
-                <p>It is a project that scraps data about venus and shows it in a dashboard</p>
-                <div class="project__tags">
-                    <h4>Tag1</h4>
-                    <h4>Tag2</h4>
-                </div>
+    <h2 class="showroom__title"> Showroom</h2>
+    <div class="showroom__content">
+
+    <svg class="previous-project">
+        <use xlink:href="/static/images/left-arrow.svg#previous"></use>
+    </svg>
+
+    <article class="project">
+        <img class="project__img" src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+        <div class="project__content">
+            <h3 class="project__title">Venus Research</h3>
+            <p>It is a project that scraps data about venus and shows it in a dashboard</p>
+            <div class="project__tags">
+                <h4>Tag1</h4>
+                <h4>Tag2</h4>
             </div>
-            </article>
+        </div>
+    </article>
+
+    <svg class="next-project">
+        <use xlink:href="/static/images/right-arrow.svg#next"></use>
+    </svg>
+    </div>
+</section>
+
+<section class="footer">
+            <svg class="footer__icon">
+                <use xlink:href="/static/images/wolf.svg#wolf"></use>
+            </svg>
+            <a href="https://www.linkedin.com/feed/">
+                <svg class="footer__icon footer__social-icon">
+                    <use xlink:href="/static/images/linkedin.svg#linkedin"></use>
+                </svg>
+            </a>
         </section>
     </body>
