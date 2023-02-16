@@ -10,6 +10,7 @@ body {
     background-color : var(--color-body);
     max-width: 1140px;
     margin: 0 auto;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
     line-height: 1.5;
 }
@@ -65,8 +66,8 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--color-headings);
-    font-size: 1.5rem;
+    color: var(--color-secondary);
+    font-size: 1.6rem;
     padding: 0 1.5rem;
 }
 
@@ -77,8 +78,13 @@ p{
 /* Presentation */
 .presentation {
     color: var(--color-headings);
-    padding: 14rem 3rem;
+    padding: 12rem 3rem;
     text-align: center;
+    background-image: url("/static/images/sky2-large.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+    margin: 0 0 2rem;
 }
 
 /* Project */
