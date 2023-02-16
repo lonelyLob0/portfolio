@@ -9,7 +9,7 @@
 body {
     background-color : var(--color-body);
     max-width: 1140px;
-    margin: 0 auto;
+    margin: 0 100px;
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
     line-height: 1.5;
@@ -95,7 +95,7 @@ p{
     max-width: 400px;
     box-shadow: 6px 6px 9px rgba(0,0,0,0.8);
     border-radius: 7%;
-    margin: 5rem 0;
+    margin: 5rem 1.6rem;
 }
 
 .project__content{
@@ -171,4 +171,16 @@ p{
 
 .footer__social-icon:hover {
     fill: var(--color-headings);
+}
+
+/* scroll-list */
+.scroll-list {
+    overflow: hidden;
+    width: 430px;
+}
+
+.projects-container {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
 }
