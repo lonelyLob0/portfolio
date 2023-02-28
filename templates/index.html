@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="/static/css/styles.css">
     </head>
    <body>
-
         <nav class="nav">
         <span> Ale Alvarado | Software Developer </span>
         <ul class="list nav__list">
@@ -25,59 +24,34 @@
 
 
         <section class="showroom">
-            <h2 class="showroom__title"> Showroom</h2>
-            <div class="showroom__content">
-                <svg class="previous-project" id="previous-btn">
-                    <use xlink:href="/static/images/left-arrow.svg#previous"></use>
-                </svg>
-                <div class="scroll-list">
-                    <div class="projects-container">
-                        <article class="project">
-                        <img class="project__img" src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+    <h2 class="showroom__title"> Showroom</h2>
+    <div class="showroom__content">
+        <svg class="previous-project" id="previous-btn">
+            <use xlink:href="/static/images/left-arrow.svg#previous"></use>
+        </svg>
+        <div class="scroll-list">
+            <div class="projects-container">
+                {% for project in projects %}
+                    <article class="project">
+                        <img class="project__img" src="{{project.image}}" alt="">
                         <div class="project__content">
-                            <h3 class="project__title">Venus Research</h3>
-                            <p>It is a project that scraps data about venus and shows it in a dashboard</p>
+                            <h3 class="project__title">{{project.name}}</h3>
+                            <p>{{project.description}}</p>
                             <div class="project__tags">
                                 <h4>Tag1</h4>
                                 <h4>Tag2</h4>
                             </div>
                         </div>
                     </article>
-
-                        <article class="project">
-                        <img class="project__img" src="https://images.unsplash.com/photo-1630694093867-4b947d812bf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60" alt="">
-                        <div class="project__content">
-                            <h3 class="project__title">Mars Research</h3>
-                            <p>It is a project that scraps data about venus and shows it in a dashboard</p>
-                            <div class="project__tags">
-                                <h4>Tag1</h4>
-                                <h4>Tag2</h4>
-                            </div>
-                        </div>
-                    </article>
-
-                        <article class="project">
-                        <img class="project__img" src="https://images.unsplash.com/photo-1658233427270-ba4d9d03b53c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bHVmZnl8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt="">
-                        <div class="project__content">
-                            <h3 class="project__title">sanji Research</h3>
-                            <p>It is a project that scraps data about venus and shows it in a dashboard</p>
-                            <div class="project__tags">
-                                <h4>Tag1</h4>
-                                <h4>Tag2</h4>
-                            </div>
-                        </div>
-                    </article>
-
-                    </div>
-
-                </div>
-
-                <svg class="next-project" id="next-btn">
-                    <use xlink:href="/static/images/right-arrow.svg#next"></use>
-                </svg>
+                {% endfor %}
             </div>
+        </div>
 
-        </section>
+        <svg class="next-project" id="next-btn">
+            <use xlink:href="/static/images/right-arrow.svg#next"></use>
+        </svg>
+    </div>
+</section>
 
 <section class="footer">
             <svg class="footer__icon">
