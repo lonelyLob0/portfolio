@@ -44,7 +44,7 @@ h3 {
 }
 
 h4 {
-   font-size: 1.3rem;
+   font-size: 1.5rem;
 }
 
 p{
@@ -114,8 +114,9 @@ p{
 
 .project__tags {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-left;
     align-items: center;
+    gap: 10px;
 }
 
 /* Showroom */
@@ -173,7 +174,7 @@ p{
     fill: var(--color-headings);
 }
 
-/* scroll-list */
+/* Scroll-list */
 .scroll-list {
     overflow: hidden;
     width: 430px;
@@ -183,4 +184,27 @@ p{
     display: flex;
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
+}
+
+/* Tags */
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    color: var(--color-body);
+    margin: 1rem 0 0 0;
+}
+
+.tag__header{
+   margin: 0 0 0 0.5rem;
+
+}
+
+.tag__icon{
+    width: 20px;
+    height: 20px;
+    margin: 0.5rem;
+    fill: var(--color-body);
 }
