@@ -1,11 +1,15 @@
 <article class="project">
-                        <img class="project__img" src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
-                        <div class="project__content">
-                            <h3 class="project__title">Venus Research</h3>
-                            <p>It is a project that scraps data about venus and shows it in a dashboard</p>
-                            <div class="project__tags">
-                                <h4>Tag1</h4>
-                                <h4>Tag2</h4>
-                            </div>
-                        </div>
-                    </article>
+    <img class="project__img" src="{{project.image}}" alt="">
+    <div class="project__content">
+        <h3 class="project__title">{{project.name}}</h3>
+        <p>{{project.description}}</p>
+        <div class="project__tags">
+            {% for tag in project.tags %}
+                <article class="tag">
+                    <h4 class="tag__header">{{tag.name}}</h4>
+                    <img src="static/images/{{tag.name}}.svg" class="tag__icon" alt="">
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</article>

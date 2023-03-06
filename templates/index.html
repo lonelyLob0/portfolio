@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="/static/css/styles.css">
-    </head>
-   <body>
-        <section class="showroom">
+{% extends "base.html" %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block content %}
+     <section class="presentation">
+        <h2>Hi there, welcome to my portfolio!</h2>
+        <p>
+          I am curious software developer trying to learn and be better every day.
+            Hope you enjoy your visit!
+        </p>
+
+    </section>
+
+    <section class="showroom">
     <h2 class="showroom__title"> Showroom</h2>
     <div class="showroom__content">
         <svg class="previous-project" id="previous-btn">
@@ -21,46 +27,24 @@
                             <h3 class="project__title">{{project.name}}</h3>
                             <p>{{project.description}}</p>
                             <div class="project__tags">
-                                <article class="tag">
-<h4 class="tag__header">CSS</h4>
-  <img src="static/images/css.svg" class="tag__icon" alt="">
-</article>
-                                <article class="tag">
-<h4 class="tag__header">Python</h4>
-  <img src="static/images/python.svg" class="tag__icon" alt="">
-</article>
-
-                                <article class="tag">
-<h4 class="tag__header">Python</h4>
-  <img src="static/images/python.svg" class="tag__icon" alt="">
-</article>
-
-                                <article class="tag">
-<h4 class="tag__header">Python</h4>
-  <img src="static/images/python.svg" class="tag__icon" alt="">
-</article>
-                                <article class="tag">
-<h4 class="tag__header">Python</h4>
-  <img src="static/images/python.svg" class="tag__icon" alt="">
-</article>
-                                <article class="tag">
-<h4 class="tag__header">Python</h4>
-  <img src="static/images/python.svg" class="tag__icon" alt="">
-</article>
-
-
-
+                                {% for tag in project.tags %}
+                                    <article class="tag">
+                                        <h4 class="tag__header">{{tag.name}}</h4>
+                                        <img src="static/images/{{tag.name}}.svg" class="tag__icon" alt="">
+                                    </article>
+                                {% endfor %}
                             </div>
                         </div>
                     </article>
                 {% endfor %}
             </div>
         </div>
-
         <svg class="next-project" id="next-btn">
             <use xlink:href="/static/images/right-arrow.svg#next"></use>
         </svg>
     </div>
 </section>
-    </body>
-</html>
+
+<script src="/static/js/scripts.js"></script>
+
+{% endblock %}

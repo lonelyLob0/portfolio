@@ -16,7 +16,9 @@ body {
 }
 
 a{
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .img-wrap{
@@ -85,6 +87,11 @@ p{
     background-size:cover;
     background-position: top center;
     margin: 0 0 2rem;
+}
+
+.presentation > p {
+    max-width: 50ch;
+    margin: 0 auto;
 }
 
 /* Project */
@@ -195,7 +202,7 @@ p{
     background-color: var(--color-secondary);
     border-radius: 20px;
     color: var(--color-body);
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 1rem 1rem;
 }
 
 .tag__header{

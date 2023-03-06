@@ -17,10 +17,16 @@ db.init_app(app)
 
 migrate = Migrate(app, db)
 
+
 @app.route('/')
 def home():
     projects = Project.query.all()
     return render_template('index.html', projects=projects)
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 
 if __name__ == '__main__':

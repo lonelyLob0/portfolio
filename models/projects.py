@@ -9,4 +9,4 @@ class Project(db.Model):
     image = db.Column(db.String(250), nullable=False)
     tags = db.relationship('Tag',
                            secondary=projects_tags,
-                           backref='tags')
+                           backref='projects')
