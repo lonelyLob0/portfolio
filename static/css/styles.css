@@ -59,10 +59,6 @@ p{
     padding-left: 0;
 }
 
-.list__item {
-    margin: 5px 10px;
-}
-
 /* Navigation Bar */
 .nav {
     display: flex;
@@ -75,6 +71,15 @@ p{
 
 .nav__list {
     display: flex;
+}
+
+.nav-list__item {
+    margin: 5px 10px;
+    transition: color 0.8s ease;
+}
+
+.nav-list__item:hover {
+    color: var(--color-headings);
 }
 
 /* Presentation */
