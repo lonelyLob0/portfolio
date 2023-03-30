@@ -1,1 +1,1 @@
-web: gunicorn ale-alvarado:main
+web: gunicorn main:app
