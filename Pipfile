@@ -12,6 +12,7 @@ flask-wtf = "*"
 flask-bootstrap = "*"
 flask-ckeditor = "*"
 gunicorn = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
