@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 flask-sqlalchemy = "*"
 flask = "*"
-psycopg = "*"
 psycopg2-binary = "*"
 flask-migrate = "*"
 flask-wtf = "*"
