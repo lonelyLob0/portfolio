@@ -27,6 +27,10 @@ POSTGRES_DB_PW = os.environ.get('POSTGRES_DB_PW')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://isxuwwsfuzvxcl:c089bb720a94482c40493b13f618d5187f325461fde16a698f70311ccd161a6e@ec2-3-230-24-12.compute-1.amazonaws.com:5432/dbk9cnp8t60a1'
 db.init_app(app)
 
+
+with app.app_context():
+    db.create_all()
+
 migrate = Migrate(app, db)
 
 # -------------------- Email variables --------------------
