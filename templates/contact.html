@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
 {% block title %}Contact{% endblock %}
 
@@ -13,11 +14,29 @@
         </header>
 
         <div class="contact__body">
+            <form action="{{url_for('contact')}}" method="post" class="contact__form">
+                {{form.csrf_token}}
+                <div class="contact__form__data">
+                     {{form.name.label}}
+                     {{form.name(class_='contact__form__data__input')}}
+                </div>
+                <div class="contact__form__data">
+                    {{form.email.label}}
+                    {{form.email(class_='contact__form__data__input')}}
+                </div>
+                <div class="contact__form__comment">
+                    {{form.comment.label}}
+                    {{form.comment}}
+                </div>
+
+                {{form.submit(class_='contact__form__submit-btn')}}
+            </form>
 
         </div>
+
     </section>
-
-
+    {{ckeditor.load(serve_local=True)}}
+    {{ckeditor.config(name='comment', custom_config="skin: 'moono-dark,/static/skins/moono-dark/'")}}
     <script src="/static/js/scripts.js"></script>
 
 {% endblock %}

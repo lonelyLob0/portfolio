@@ -7,21 +7,21 @@
         <div class="scroll-list">
             <div class="projects-container">
                 {% for project in projects %}
-                    <article class="project">
-                        <img class="project__img" src="{{project.image}}" alt="">
-                        <div class="project__content">
-                            <h3 class="project__title">{{project.name}}</h3>
-                            <p>{{project.description}}</p>
-                            <div class="project__tags">
-                                {% for tag in project.tags %}
-                                    <article class="tag">
-                                        <h4 class="tag__header">{{tag.name}}</h4>
-                                        <img src="static/images/{{tag.name}}.svg" class="tag__icon" alt="">
-                                    </article>
-                                {* endfor *}
-                            </div>
+                <article class="project">
+                    <img class="project__img" src="{{project.image}}" alt="">
+                    <div class="project__content">
+                        <h3 class="project__title">{{project.name}}</h3>
+                        <p>{{project.description}}</p>
+                        <div class="project__tags">
+                            {% for tag in project.tags %}
+                            <article class="tag">
+                                <h4 class="tag__header">{{tag.name}}</h4>
+                                <img src="static/images/{{tag.name}}.svg" class="tag__icon" alt="">
+                            </article>
+                            {% endfor %}
                         </div>
-                    </article>
+                    </div>
+                </article>
                 {% endfor %}
             </div>
         </div>

@@ -3,16 +3,15 @@
 {% block title %}Portfolio{% endblock %}
 
 {% block content %}
-     <section class="presentation">
-        <h2>Hi there, welcome to my portfolio!</h2>
-        <p>
-          I am curious software developer trying to learn and be better every day.
-            Hope you enjoy your visit!
-        </p>
+<section class="presentation">
+    <h2>Hi there, welcome to my portfolio!</h2>
+    <p>
+        I am curious software developer trying to learn and be better every day.
+        Hope you enjoy your visit!
+    </p>
+</section>
 
-    </section>
-
-    <section class="showroom">
+<section class="showroom">
     <h2 class="showroom__title"> Showroom</h2>
     <div class="showroom__content">
         <svg class="previous-project" id="previous-btn">
@@ -21,21 +20,21 @@
         <div class="scroll-list">
             <div class="projects-container">
                 {% for project in projects %}
-                    <article class="project">
-                        <img class="project__img" src="{{project.image}}" alt="">
-                        <div class="project__content">
-                            <h3 class="project__title">{{project.name}}</h3>
-                            <p>{{project.description}}</p>
-                            <div class="project__tags">
-                                {% for tag in project.tags %}
-                                    <article class="tag">
-                                        <h4 class="tag__header">{{tag.name}}</h4>
-                                        <img src="static/images/{{tag.name}}.svg" class="tag__icon" alt="">
-                                    </article>
-                                {% endfor %}
-                            </div>
+                <article class="project">
+                    <img class="project__img" src="{{project.image}}" alt="">
+                    <div class="project__content">
+                        <h3 class="project__title">{{project.name}}</h3>
+                        <p>{{project.description}}</p>
+                        <div class="project__tags">
+                            {% for tag in project.tags %}
+                            <article class="tag">
+                                <h4 class="tag__header">{{tag.name}}</h4>
+                                <img src="static/images/{{tag.name}}.svg" class="tag__icon" alt="">
+                            </article>
+                            {% endfor %}
                         </div>
-                    </article>
+                    </div>
+                </article>
                 {% endfor %}
             </div>
         </div>

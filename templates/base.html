@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title%}{%endblock%}</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-</head>
-<body>
-    <nav class="nav">
-        <span> Ale Alvarado | Software Developer </span>
-        <ul class="list nav__list">
-            <li class="nav-list__item">
-                <a href="{{url_for('home')}}">Home</a>
-            </li>
-            <li class="nav-list__item">
-                <a href="{{url_for('contact')}}">Contact</a>
-            </li>
-        </ul>
-    </nav>
-    {% block content %}{% endblock %}
-    <section class="footer">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title%}{%endblock%}</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
+
+    </head>
+    <body>
+        <nav class="nav">
+            <span> Ale Alvarado | Software Developer </span>
+            <ul class="list nav__list">
+                <li class="nav-list__item">
+                    <a href="{{url_for('home')}}">Home</a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="{{url_for('contact')}}">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock %}
+        <section class="footer">
             <svg class="footer__icon">
                 <use xlink:href="/static/images/wolf.svg#wolf"></use>
             </svg>
@@ -28,5 +29,5 @@
                 </svg>
             </a>
         </section>
-</body>
+    </body>
 </html>

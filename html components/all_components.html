@@ -1,23 +1,23 @@
 <body>
 
-        <nav class="nav">
-        <span> Ale Alvarado | Software Developer </span>
-        <ul class="list nav__list">
-            <li class="list__item">Home</li>
-            <li class="list__item">About</li>
-            <li class="list__item">Contact</li>
-        </ul>
-        </nav>
-     <section class="presentation">
-        <h2>Hi there, welcome to my portfolio!</h2>
-        <p>
-          I am curious software developer
-        </p>
+<nav class="nav">
+    <span> Ale Alvarado | Software Developer </span>
+    <ul class="list nav__list">
+        <li class="list__item">Home</li>
+        <li class="list__item">About</li>
+        <li class="list__item">Contact</li>
+    </ul>
+</nav>
+<section class="presentation">
+    <h2>Hi there, welcome to my portfolio!</h2>
+    <p>
+        I am curious software developer
+    </p>
 
-    </section>
+</section>
 
 
-        <section class="showroom">
+<section class="showroom">
     <h2 class="showroom__title"> Showroom</h2>
     <div class="showroom__content">
         <svg class="previous-project" id="previous-btn">
@@ -26,21 +26,21 @@
         <div class="scroll-list">
             <div class="projects-container">
                 {% for project in projects %}
-                    <article class="project">
-                        <img class="project__img" src="{{project.image}}" alt="">
-                        <div class="project__content">
-                            <h3 class="project__title">{{project.name}}</h3>
-                            <p>{{project.description}}</p>
-                            <div class="project__tags">
-                                {% for tag in project.tags %}
-                                    <article class="tag">
-                                        <h4 class="tag__header">{{tag.name}}</h4>
-                                        <img src="static/images/{{tag.name}}.svg" class="tag__icon" alt="">
-                                    </article>
-                                {* endfor *}
-                            </div>
+                <article class="project">
+                    <img class="project__img" src="{{project.image}}" alt="">
+                    <div class="project__content">
+                        <h3 class="project__title">{{project.name}}</h3>
+                        <p>{{project.description}}</p>
+                        <div class="project__tags">
+                            {% for tag in project.tags %}
+                            <article class="tag">
+                                <h4 class="tag__header">{{tag.name}}</h4>
+                                <img src="static/images/{{tag.name}}.svg" class="tag__icon" alt="">
+                            </article>
+                            {* endfor *}
                         </div>
-                    </article>
+                    </div>
+                </article>
                 {% endfor %}
             </div>
         </div>
@@ -51,14 +51,14 @@
 </section>
 
 <section class="footer">
-            <svg class="footer__icon">
-                <use xlink:href="/static/images/wolf.svg#wolf"></use>
-            </svg>
-            <a href="https://www.linkedin.com/feed/">
-                <svg class="footer__icon footer__social-icon">
-                    <use xlink:href="/static/images/linkedin.svg#linkedin"></use>
-                </svg>
-            </a>
-        </section>
+    <svg class="footer__icon">
+        <use xlink:href="/static/images/wolf.svg#wolf"></use>
+    </svg>
+    <a href="https://www.linkedin.com/feed/">
+        <svg class="footer__icon footer__social-icon">
+            <use xlink:href="/static/images/linkedin.svg#linkedin"></use>
+        </svg>
+    </a>
+</section>
 <script src="/static/js/scripts.js"></script>
-    </body>
+</body>

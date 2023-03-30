@@ -9,6 +9,9 @@ flask = "*"
 psycopg = "*"
 psycopg2-binary = "*"
 flask-migrate = "*"
+flask-wtf = "*"
+flask-bootstrap = "*"
+flask-ckeditor = "*"
 
 [dev-packages]
 
