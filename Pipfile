@@ -12,6 +12,7 @@ flask-migrate = "*"
 flask-wtf = "*"
 flask-bootstrap = "*"
 flask-ckeditor = "*"
+gunicorn = "*"
 
 [dev-packages]
 
