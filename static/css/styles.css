@@ -1,4 +1,8 @@
 /* General */
+*, :after, :before {
+    box-sizing: border-box;
+}
+
 :root {
     --color-body: #151515;
     --color-headings: ivory;

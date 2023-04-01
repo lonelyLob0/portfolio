@@ -21,10 +21,10 @@ ckeditor = CKEditor(app)
 Bootstrap(app)
 
 POSTGRES_DB_PW = os.environ.get('POSTGRES_DB_PW')
-# app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://postgres:{POSTGRES_DB_PW}' \
-#                                         f'@localhost/portfolio_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://postgres:{POSTGRES_DB_PW}' \
+                                        f'@localhost/portfolio_db'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://isxuwwsfuzvxcl:c089bb720a94482c40493b13f618d5187f325461fde16a698f70311ccd161a6e@ec2-3-230-24-12.compute-1.amazonaws.com:5432/dbk9cnp8t60a1'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://isxuwwsfuzvxcl:c089bb720a94482c40493b13f618d5187f325461fde16a698f70311ccd161a6e@ec2-3-230-24-12.compute-1.amazonaws.com:5432/dbk9cnp8t60a1'
 db.init_app(app)
 
 # Needed for creating the DB in heroku.
@@ -83,7 +83,7 @@ def contact():
 if __name__ == '__main__':
     # with app.app_context():
     #     db.create_all()
-    # app.run(debug=True)
-    app.run()
+    app.run(debug=True)
+    # app.run()
 
 
