@@ -3,17 +3,20 @@
 {% block title %}Portfolio{% endblock %}
 
 {% block content %}
-<section class="presentation">
+
+<div class="block">
+    <section class="container presentation">
     <h2>Hi there, welcome to my portfolio!</h2>
     <p>
         I am curious software developer trying to learn and be better every day.
         Hope you enjoy your visit!
     </p>
 </section>
+</div>
 
-<section class="showroom">
+<section class="block container showroom">
     <h2 class="showroom__title"> Showroom</h2>
-    <div class="showroom__content">
+    <div class="grid grid--1x3 showroom__content">
         <svg class="previous-project" id="previous-btn">
             <use xlink:href="/static/images/left-arrow.svg#previous"></use>
         </svg>

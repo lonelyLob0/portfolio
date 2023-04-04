@@ -16,8 +16,6 @@ body {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
     line-height: 1.5;
-    margin: 0 100px;
-    max-width: 1140px;
 }
 
 a {
@@ -29,6 +27,11 @@ a {
 .container {
     margin: 0 auto;
     max-width: 1140px;
+}
+
+.block {
+    padding: var(--padding-vertical) 2rem;
+    --padding-vertical: 5rem;
 }
 
 /* Typography */
@@ -59,7 +62,15 @@ p {
 }
 
 .grid--1x2 {
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--2x1 {
+    grid-template-rows: repeat(2, 1fr);
 }
 
 /* Lists */
@@ -98,7 +109,6 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--color-headings);
-    margin: 0 0 2rem;
     padding: 12rem 3rem;
     text-align: center;
 }
@@ -147,23 +157,34 @@ p {
     color: var(--color-secondary);
     display: flex;
     flex-direction: column;
-    margin: 8rem 0;
-    padding: 0 0 2rem;
 }
 
 .showroom__content {
     align-items: center;
-    display: flex;
-    justify-content: space-between;
+    column-gap: 10px;
 }
 
 .previous-project,
 .next-project {
     fill: var(--color-secondary);
     height: 55px;
+    justify-self: center;
     margin: 0 5rem;
     transition: transform 0.4s ease;
     width: 55px;
+}
+
+@media screen and (max-width: 768px) {
+    .grid--1x3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+    .scroll-list {
+        grid-column: 1 / span 2;
+    }
+    .previous-project {
+        grid-column: 1;
+        grid-row: 2;
+    }
 }
 
 .previous-project:hover {
